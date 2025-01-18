@@ -1,0 +1,163 @@
+@import 'default';
+@import 'nav';
+@import 'course-details';
+@import 'events';
+@import 'blog';
+@import 'internship';
+@import 'landing';
+@import 'footer';
+
+.green-background {
+    background-color: green;
+    color: white;
+
+    .single-image-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-inline: auto;
+    }
+
+}
+
+.image-grid {
+    display: flex;
+    gap: 1rem;
+
+    >* {
+        flex: 1;
+    }
+
+    div:first-child {
+        background-color: rgb(219, 219, 219);
+
+    }
+
+    .two-boxes {
+        div {
+            background-color: rgb(219, 219, 219);
+            flex: 1;
+        }
+
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    >div:first-child {
+        min-height: 500px;
+
+        @media screen and (width < 600px) {
+            min-height: 200px;
+        }
+
+        height: 100%;
+    }
+}
+
+
+.about-page-divider {
+    display: flex;
+    gap: 2rem;
+    padding-block: 6rem;
+    flex-direction: column;
+
+    @media screen and (width > 600px) {
+        flex-direction: row;
+
+    }
+
+    &.green-background {
+        background-color: green;
+        color: white;
+    }
+
+    >* {
+        flex: 1;
+    }
+
+    .text-content {
+        text-align: center;
+        display: grid;
+        place-content: center;
+
+    }
+
+}
+
+.split-images {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+
+    @media screen and (width < 600px) {
+        display: none;
+    }
+}
+
+.library-page {
+    display: grid;
+    padding-block: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+
+    .img-container {
+        height: 200px;
+        width: 100%;
+        margin-bottom: 1.5rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            border-radius: 8px;
+
+        }
+    }
+
+    .library-card {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        border-radius: 8px;
+        padding: 1rem;
+    }
+
+    .text-content {
+        display: grid;
+
+        P,
+        h4 {
+            margin-block: 0;
+        }
+
+        gap: .6em;
+    }
+}
+
+.library-header-title {
+    text-align: center;
+}
+
+.library-hero-image {}
+
+.about-content-text {
+    margin-top: 6rem;
+
+    @media screen and (width>600px) {
+
+        margin-top: 12rem;
+    }
+
+    >div {
+        text-align: center;
+        margin-inline: auto;
+        max-width: 700px;
+
+        p {
+            width: 100%;
+            max-width: unset;
+        }
+    }
+}

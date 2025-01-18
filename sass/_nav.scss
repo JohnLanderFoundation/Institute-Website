@@ -1,0 +1,371 @@
+nav {
+    --_color: white;
+    --_font-weight: 400;
+    --_svg-fill-clr: #fff;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+
+    &.scrolled {
+        position: fixed;
+        background-color: white !important;
+        --_color: black;
+        --_svg-fill-clr: black;
+    }
+
+    @media screen and (width < $main-breakpoint-width) {
+        --_color: black;
+        background-color: white;
+
+
+    }
+
+
+    .logo {
+        display: inline-block;
+        width: 40px;
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    .toggle-mobile-nav {
+        display: grid;
+        gap: 3px;
+        width: 40px;
+        height: 40px;
+        place-content: center;
+
+        &.nav-opened {
+            .bar:nth-child(2) {
+                display: none;
+            }
+
+            .bar {
+                border-color: black;
+
+                &:first-child {
+                    transform: translate(0.9px, 2.4px) rotate(45deg);
+                }
+
+                &:last-child {
+                    transform: translate(0, -3px) rotate(-45deg);
+                }
+            }
+        }
+    }
+
+    @media screen and (width > $main-breakpoint-width) {
+        .toggle-mobile-nav {
+            display: none;
+        }
+    }
+
+    .bar {
+        background-color: var(--green);
+        width: 20px;
+        border: 1.2px solid green;
+        border-radius: 2px;
+        transform: translate(0) rotate(0);
+        transition: transform var(--transition-duration) ease-in-out;
+    }
+
+    .logo-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media screen and (width > $main-breakpoint-width) {
+            width: max-content;
+
+            svg {
+                display: none;
+            }
+        }
+    }
+
+    .wrapper {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        padding-block: rem(10px);
+
+        @media screen and (width < $main-breakpoint-width) {
+            align-items: left;
+            flex-wrap: wrap;
+        }
+    }
+
+    &[data-searchbar-opened="true"] {
+        background-color: white;
+
+    }
+
+
+    .nav-items {
+        display: grid;
+        grid-template-rows: 0fr;
+        font-size: 1rem;
+        font-weight: 500;
+        margin-left: auto;
+        align-items: center;
+        color: white;
+        width: 100%;
+        top: 100%;
+        z-index: 100;
+
+        @media screen and (width> $main-breakpoint-width) {
+            flex: 1;
+            justify-content: right;
+            display: inline-flex;
+            color: white;
+
+            .dropdown-cta {
+                display: none;
+            }
+
+            .responsive-nav-wrapper {
+                display: flex;
+                width: 100%;
+                justify-content: right;
+                align-items: center;
+            }
+        }
+
+
+        .nav-cta {
+            padding: 10px 16px;
+            display: grid;
+            gap: 8px;
+
+        }
+
+        .dropdown-cta {
+
+            span {
+                display: block;
+            }
+
+            a {
+                color: white;
+                display: flex;
+            }
+
+            &>.cta.alt {
+                background-color: white;
+
+                color: var(--green);
+                border: 1px solid var(--green);
+            }
+        }
+
+
+
+        @media screen and (width < $main-breakpoint-width) {
+            &.display-none {
+                display: none;
+            }
+
+            a {
+                width: 100%;
+            }
+
+            position: absolute;
+            left: 0;
+            background-color: white;
+
+            .keep {
+                display: none;
+            }
+        }
+
+        li:has(form) {
+            max-width: min(35.694%, 400px);
+            width: 100%;
+            margin-right: rem(32px);
+        }
+
+        li>button {
+            stroke: var(--_color);
+            border: none;
+            cursor: pointer;
+            background-color: transparent;
+            display: grid;
+            place-content: center;
+            padding: rem(8px);
+        }
+
+        &[data-searchbar-opened="true"]>div>li:not(.keep) {
+            display: none;
+        }
+
+        &[data-searchbar-opened="false"]>div>.keep {
+            display: none;
+        }
+
+
+
+        .link-dropdown-parent {
+            position: relative;
+
+            @media screen and (width > $main-breakpoint-width) {
+                &:hover>.dropdown {
+                    display: block;
+                }
+            }
+
+            a {
+                display: flex;
+                gap: 6px;
+                align-items: center;
+
+                svg {
+                    stroke: var(--_color);
+                }
+            }
+        }
+
+        .dropdown {
+            background-color: white;
+            display: grid;
+            transition: grid-template-rows var(--transition-duration);
+            grid-template-rows: 1fr;
+
+
+            >div {
+                overflow: hidden;
+            }
+
+            @media screen and (width < $main-breakpoint-width) {
+                >div {
+                    padding-block: rem(8px);
+                }
+
+            }
+
+            @media screen and (width > $main-breakpoint-width) {
+                width: 200px;
+                border-radius: rem(5px);
+                top: 100%;
+                left: 0;
+                position: absolute;
+
+                a {
+                    padding-block: rem(10px);
+                    padding-right: rem(8px);
+                }
+            }
+
+            a {
+                color: black;
+
+            }
+        }
+
+
+
+        .search-bar {
+            --_border-clr: #C5C7C7;
+            --_search-bar-height: 1em;
+            display: flex;
+            border: 1px solid var(--_border-clr);
+            display: inline-flex;
+            align-items: center;
+            width: 100%;
+            border-radius: rem(78px);
+            padding-inline: rem(20px);
+            margin-block: rem(10.75px);
+
+            .input-search-btn {
+                background-color: inherit;
+                border: none;
+                height: 100%;
+                display: grid;
+                place-content: center;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            svg {
+                stroke: var(--_border-clr);
+            }
+
+            input {
+                color: var(--_color);
+                padding: var(--_search-bar-height) .5rem;
+                outline: none;
+                border: none;
+                background-color: transparent;
+                width: 100%;
+
+                &::placeholder {
+                    color: var(--_border-clr);
+                }
+            }
+        }
+
+        [aria-expanded="false"] {
+            grid-template-rows: 0fr;
+        }
+
+        @media screen and (width < $main-breakpoint-width) {
+            [aria-expanded="true"] {
+                grid-template-rows: 1fr;
+            }
+
+            [aria-expanded="false"] {
+                >div {
+                    padding-block: 0;
+                }
+
+            }
+
+            [data-toggle-searchbar] {
+                display: none;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            padding: rem(20px);
+            display: inline-block;
+            color: var(--_color);
+            font-weight: var(--_font-weight);
+            transition: color var(--transition-duration) ease-in-out, stroke var(--transition-duration) ease-in-out;
+
+            &:hover {
+                color: var(--green);
+
+                svg {
+                    stroke: var(--green);
+                }
+            }
+        }
+
+        svg {
+            stroke: var(--_svg-fill-clr);
+        }
+    }
+
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul {
+        list-style: none;
+    }
+}
+
+@media screen and (width < $main-breakpoint-width) {
+    .slide-buttons {
+        display: none;
+    }
+}

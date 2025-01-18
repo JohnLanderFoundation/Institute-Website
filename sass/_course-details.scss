@@ -1,0 +1,150 @@
+.course-details {
+    --_color: hsla(0, 0%, 17%, 1);
+    --_border-color: hsla(200, 1%, 61%, 1);
+    padding-block: 3rem;
+    align-content: center;
+
+    @media screen and (width > 600px) {
+        min-height: 80vh;
+    }
+
+    .wrapper {
+        display: grid;
+        gap: 1rem;
+
+        p {
+            margin-block: 0;
+        }
+    }
+
+    header {
+        display: grid;
+        gap: rem(8px);
+    }
+
+    &__container {
+        border-radius: rem(10px);
+        border: 1px solid var(--_border-color);
+    }
+
+    &__box {
+        padding: 1rem;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid var(--_border-color);
+        }
+    }
+
+    .round-block {
+        display: inline-block;
+        background-color: #2C2C2C;
+        width: 5px;
+        height: 5px;
+        vertical-align: middle;
+        margin-inline: 2px;
+        border-radius: 50%;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-rows: 0fr;
+        overflow: hidden;
+        transition: grid-template-rows var(--transition-duration);
+
+        >div {
+            overflow: hidden;
+        }
+
+        &[aria-expanded="true"] {
+            grid-template-rows: 1fr;
+        }
+    }
+
+    &__summary {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+
+        >p {
+            font-size: clamp(1rem, 0.231vw + 0.94rem, 1.125rem);
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        >div {
+            padding: .25em;
+            display: grid;
+            place-content: center;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__count {
+        color: var(--_color);
+    }
+
+    &__course {
+        display: grid;
+        gap: rem(2px);
+        padding: rem(12px) 0;
+        margin-left: 1rem;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid var(--_border-color);
+        }
+    }
+
+    &__header {
+        font-weight: 500;
+        font-size: clamp(1rem, 0.231vw + 0.94rem, 1.125rem);
+    }
+
+    &__paragraph {
+        font-size: rem(14px);
+    }
+}
+
+.courses-details-hero-content {
+    max-width: 760px;
+
+    ul {
+        padding-left: 0;
+        list-style-position: inside;
+    }
+
+    li {
+        margin-bottom: rem(8px);
+
+        @media screen and (width> 700px) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    a {
+        color: inherit;
+
+        &:visited {
+            color: inherit;
+        }
+    }
+
+    .price-tag {
+        display: flex;
+        gap: 8px;
+        align-items: flex-start;
+
+        >.price {
+            display: inline-block;
+            padding: rem(4px) rem(19px);
+            color: white;
+            background-color: var(--green);
+            border-radius: 12px;
+        }
+    }
+}

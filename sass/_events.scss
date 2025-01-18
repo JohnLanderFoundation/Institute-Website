@@ -1,0 +1,123 @@
+.events {
+    padding-block: 3rem;
+
+    .wrapper {
+        gap: 1rem;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+        @media screen and (width > 600px) {
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 4rem;
+        }
+    }
+
+}
+
+.event-date {
+    display: flex;
+    gap: 8px;
+    font-size: 14px;
+    align-items: center;
+}
+
+.event-card {
+    // display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+    min-height: 300px;
+
+    @media screen and (width < 600px) {
+        flex-direction: column;
+    }
+
+    @media screen and (width > 600px) {
+        img {
+            // max-width: 250px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .event-img-container {
+            height: 300px;
+        }
+    }
+
+    .event-img-container {
+        width: 100%;
+        flex: 2;
+
+    }
+
+    .event-text-container {
+        flex: 3;
+        display: grid;
+        gap: 8px;
+
+        p {
+            margin-block: 0;
+        }
+    }
+
+    img {
+        width: 100%;
+        // height: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+.page-divider {
+    display: flex;
+    gap: 2rem;
+    position: relative;
+
+
+
+    aside {
+        position: sticky;
+        top: 0;
+        padding-block: 3rem;
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        align-self: flex-start;
+
+        .blog-image {
+            width: 100%;
+            aspect-ratio: 1.012;
+            width: 350px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        aside {
+            display: none;
+        }
+
+
+    }
+
+    @media screen and (min-width: 600px) {
+        .events {
+            flex: 4;
+            border-right: 1px solid hsla(200, 1%, 61%, 1);
+        }
+
+
+    }
+}
