@@ -4,23 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="victor odoi">
+    <meta name="author" content="Victor Odoi">
     <title>John Lander Energy Institute - Home</title>
-    <meta name="title" content="John Lander Energy Instititute">
+    <meta name="title" content="John Lander Energy Institute">
     <meta name="description"
-        content="**John Lander Institute** is a premier educational and research organization dedicated to advancing knowledge and innovation across various disciplines. With a commitment to excellence, we provide cutting-edge programs, foster interdisciplinary collaboration, and equip individuals with the skills and insights needed to thrive in an ever-changing world. Join us in shaping the future of education and research.">
-    <meta name="keywords" content="institute, uniport">
+        content="John Lander Institute is a premier educational and research organization dedicated to advancing knowledge and innovation across various disciplines. With a commitment to excellence, we provide cutting-edge programs, foster interdisciplinary collaboration, and equip individuals with the skills and insights needed to thrive in an ever-changing world. Join us in shaping the future of education and research.">
+    <meta name="keywords" content="institute, Uniport">
     <meta name="robots" content="index, follow">
     <!-- SOCIAL MEDIA INTEGRATION -->
-    <meta property="og:title" content="John Lander Energy Instititute">
-    <meta property="og:description" content="">
-    <meta property="og:image">
+    <meta property="og:title" content="John Lander Energy Institute">
+    <meta property="og:description"
+        content="ohn Lander Institute is a premier educational and research organization dedicated to advancing knowledge and innovation across various disciplines. With a commitment to excellence, we provide cutting-edge programs, foster interdisciplinary collaboration, and equip individuals with the skills and insights needed to thrive in an ever-changing world. Join us in shaping the future of education and research.">
+    <meta property="og:image" content="/assets/logo/favicon-32x32.png">
     <meta property="og:url">
-    <meta property="twitter:card" content="">
+    <meta property="twitter:card" content="summary">
     <meta property="twitter:title" content="John Lander Energy Institute">
     <meta property="twitter:description"
-        content="**John Lander Institute** is a premier educational and research organization dedicated to advancing knowledge and innovation across various disciplines. With a commitment to excellence, we provide cutting-edge programs, foster interdisciplinary collaboration, and equip individuals with the skills and insights needed to thrive in an ever-changing world. Join us in shaping the future of education and research.">
-    <meta property="twitter:image" content="">
+        content="John Lander Institute is a premier educational and research organization dedicated to advancing knowledge and innovation across various disciplines. With a commitment to excellence, we provide cutting-edge programs, foster interdisciplinary collaboration, and equip individuals with the skills and insights needed to thrive in an ever-changing world. Join us in shaping the future of education and research.">
+    <meta property="twitter:image" content="/assets/logo/favicon-32x32.png">
     <!-- FAVICON  -->
     <link rel="shortcut icon" href="/assets/logo/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.png">
@@ -52,7 +53,7 @@
                     <!-- NAVIGATION LINKS  -->
                     <div class="responsive-nav-wrapper">
                         <!-- HOME PAGE LINK  -->
-                        <li><a href="/">Home</a></li>
+                        <li><a data-nav-link href="/index.html">Home</a></li>
                         <!-- PROGRAMS PAGE WITH DROPDOWN LINK  -->
                         <li class="link-dropdown-parent">
                             <a href="javascript:void(0)" role="button">
@@ -69,15 +70,36 @@
                             </a>
                             <ul class="dropdown" aria-expanded="false">
                                 <div>
-                                    <li><a href="/courses.html">Courses</a></li>
+                                    <li><a data-nav-link href="/courses.html">Courses</a></li>
 
-                                    <li><a href="/internship.html">Internship</a></li>
+                                    <li><a data-nav-link href="/internship.html">Internship</a></li>
 
                                 </div>
                             </ul>
                         </li>
                         <!-- ABOUT PAGE LINK  -->
-                        <li><a href="/about.html">About Us</a></li>
+                        <li class="link-dropdown-parent">
+                            <a href="javascript:void(0)" role="button">
+                                <span>About</span>
+                                <span>
+                                    <svg width="12" height="7" viewBox="0 0 12 7" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M10.7917 1.33278L6.94996 5.61974C6.49625 6.12602 5.75383 6.12602 5.30013 5.61974L1.45837 1.33278"
+                                            stroke-width="1.33333" stroke-miterlimit="10" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </a>
+                            <ul class="dropdown" aria-expanded="false">
+                                <div>
+                                    <li><a data-nav-link href="/about.html">About Us</a></li>
+
+                                    <li><a data-nav-link href="/aboutceo.html">About the CEO</a></li>
+
+                                </div>
+                            </ul>
+                        </li>
                         <!-- MEDIA PAGE LINK  -->
                         <li class="link-dropdown-parent">
                             <a href="javascript:void(0)" role="button">
@@ -95,13 +117,13 @@
                             </a>
                             <ul class="dropdown" aria-expanded="false">
                                 <div>
-                                    <li><a href="/events.html">Events/News</a></li>
-                                    <li><a href="/blog.html">Blog</a></li>
+                                    <li><a data-nav-link href="/events.html">Events/News</a></li>
+                                    <li><a data-nav-link href="/blog.html">Blog</a></li>
                                 </div>
                             </ul>
                         </li>
                         <!-- CONTACT PAGE LINK  -->
-                        <li><a href="/contact.html">Contact Us</a></li>
+                        <li><a data-nav-link href="/contact.html">Contact Us</a></li>
                         <!-- SEARCHBAR  -->
                         <li class="keep">
                             <form action="" aria-expanded="true" class="search-bar">
@@ -123,12 +145,12 @@
                         <!-- CALL TO ACTION IN NAVBAR ON MOBILE SCREENS -->
                         <div class="nav-cta">
                             <li class="dropdown-cta">
-                                <a href="" class="cta full-width">Explore Programs
+                                <a data-nav-link href="index.html" class="cta full-width">Explore Programs
 
                                 </a>
                             </li>
                             <li class="dropdown-cta">
-                                <a href="" class="cta alt full-width">Subscribe Now
+                                <a data-nav-link href="index.html" class="cta alt full-width">Subscribe Now
 
                                 </a>
                             </li>
@@ -162,31 +184,36 @@
         </nav>
         <!-- HERO SECTION  -->
         <section class="hero hero__section container">
-            <div class="hero__intro-text">
-                <p class="hero__header">Shaping the Future of Energy and Petroleum Professionals
+            <div class="hero__intro-text" data-animation="slide-in">
+                <p class="hero__header">
+                    Master the Energy Transition with Expertise.
                 </p>
-                <p class="hero__sub-header">Join a world-class institute committed to empowering industry leaders with
-                    cutting-edge training, certifications, and real-world expertise</p>
+                <p class="hero__sub-header">At JLETRTL, we deliver cutting-edge
+                    training in oil, gas, renewable, and
+                    digital innovation for a sustainable future.</p>
             </div>
-            <div class="hero__call-to-action">
-                <a href="" class="cta-btn"><span> Explore Programs</span><svg width="25" height="24" viewBox="0 0 25 24"
-                        fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="hero__call-to-action" data-animation="slide-in">
+                <a href="" class="cta-btn">
+                    <span>Start Your Journey</span><svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
                         <path d="M14.93 5.92999L21 12L14.93 18.07" stroke-width="1.5" stroke-miterlimit="10"
                             stroke-linecap="round" stroke-linejoin="round" stroke="white" />
                         <path d="M4 12H20.83" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
                             stroke-linejoin="round" stroke="white" />
                     </svg>
                 </a>
-                <a href="/about.html" class="cta-btn cta-btn-alt"><span>About Us</span><svg width="25" height="24"
+
+                <!-- MODIFIED: REMOVED FROM THE HERO SECTION  -->
+                <!-- <a href="/about.html" class="cta-btn cta-btn-alt"><span>About Us</span><svg width="25" height="24"
                         viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14.93 5.92999L21 12L14.93 18.07" stroke-width="1.5" stroke-miterlimit="10"
                             stroke-linecap="round" stroke-linejoin="round" stroke="white" />
                         <path d="M4 12H20.83" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
                             stroke-linejoin="round" stroke="white" />
                     </svg>
-                </a>
+                </a> -->
             </div>
-            <div class="hero__misc">
+            <div class="hero__misc" data-animation="slide-in">
                 <div class="hero__misc-box">
                     <p class="numbered-identity">10k+</p>
                     <p class="descriptive-identity">Trained <br>Professionals</p>
@@ -204,10 +231,12 @@
 
         <div class="slider" data-slide-duration="3500">
             <div class="slides">
+
                 <img src="/assets/images/heroimg-1.webp" alt="Image 1" width="1440" height="800">
+                <!-- <img src="/assets/images/heroimg-1.webp" alt="Image 1" width="1440" height="800">
                 <img src="/assets/images/heroimg-2.webp" alt="Image 2" width="1440" height="800">
                 <img src="/assets/images/heroimg-3.webp" alt="Image 3" width="1440" height="800">
-                <img src="/assets/images/heroimg-4.webp" alt="Image 4" width="1440" height="800">
+                <img src="/assets/images/heroimg-4.webp" alt="Image 4" width="1440" height="800"> -->
             </div>
         </div>
         <div class="slide-buttons">
@@ -215,49 +244,35 @@
             <button class="arrow right" onclick="changeSlide(1)">&#10095;</button>
         </div>
     </header>
-    <!-- <section class="wrapper collaboration container-fluid">
-        <h2 class="collaboration__header">Join 25+ collaboarating companies</h2>
-        <section class="collaboration__section">
-            <div class="collaboration__images-container">
-                <div>
-                    <img src="/assets/images/wep-utg8ebn7-1.webp" alt="collaborating company image 1" loading="lazy"
-                        width="198" height="32">
-                    <img src="/assets/images/fanaka-bychdn-o-1.webp" alt="collaborating company image" loading="lazy"
-                        width="185.33" height="100">
-                    <img src="/assets/images/vector.webp" alt="collaborating company image" loading="lazy" width="146"
-                        height="83">
-                    <img src="/assets/images/lafaaaclogo-d56qnahv-1.webp" alt="collaborating company image"
-                        loading="lazy" width="148.82" height="100">
-                    <img src="/assets/images/vector-1.webp" alt="collaborating company image" loading="lazy" width="159"
-                        height="68">
-                    <img src="/assets/images/vector-2.webp" alt="collaborating company image" loading="lazy" width="144"
-                        height="62">
-                    <img class="images-slide-mobile" src="/assets/images/wep-utg8ebn7-1.webp"
-                        alt="collaborating company image" loading="lazy" width="198" height="32">
-                    <img class="images-slide-mobile" src="/assets/images/fanaka-bychdn-o-1.webp"
-                        alt="collaborating company image" loading="lazy" width="185.33" height="100">
-                    <img class="images-slide-mobile" src="/assets/images/vector.webp" alt="collaborating company image"
-                        loading="lazy" width="146" height="83">
-                    <img class="images-slide-mobile" src="/assets/images/lafaaaclogo-d56qnahv-1.webp"
-                        alt="collaborating company image" loading="lazy" width="148.82" height="100">
-                    <img class="images-slide-mobile" src="/assets/images/vector-1.webp"
-                        alt="collaborating company image" loading="lazy" width="159" height="68">
-                    <img class="images-slide-mobile" src="/assets/images/vector-2.webp"
-                        alt="collaborating company image" loading="lazy" width="144" height="62">
-                </div>
-            </div>
-        </section>
-    </section> -->
+    <section class="two-column-layout container-fluid">
+        <div class="text-section" data-animation="slide-in">
+            <h2>Elevate your Career</h2>
+            <p>
+                Unlock your full potential and take your energy career to new heights. At JOHN LANDER ENERGY TRAINING
+                RESOURCES AND
+                TECHNOLOGY LIMITED, we provide world-class training and development programs designed to equip you with
+                the skills,
+                knowledge, and expertise needed to succeed in the ever-evolving energy industry.
+                <br>
+                <br>
+                Discover our comprehensive training solutions and start elevating your career today!
+            </p>
+        </div>
+        <div class="image-section grid" data-animation="zoom-in">
+            <div><img src="assets/images/eyc1.jpg" alt="Elevate your career image 1"></div>
+            <div><img src="assets/images/eyc2.jpg" alt="Elevate your career image 2"></div>
+            <div><img src="assets/images/eyc3.jpg" alt="Elevate your career image 3"></div>
 
-
-    <section class="features-main features__section ">
+        </div>
+    </section>
+    <section class="features-main features__section light-blue-bg">
         <div class="features__section container-fluid">
-            <h2 class="features__header">
+            <h2 class="features__header" data-animation="slide-in">
                 Leading the Way in Energy Education and Career Advancement
             </h2>
             <div class="features__texts-container">
                 <div class="features__card-container">
-                    <div class="features__card">
+                    <div class="features__card" data-animation="slide-in">
                         <div class="features__card-icon"><svg width="49" height="49" viewBox="0 0 49 49" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -272,7 +287,7 @@
                         <div class="features__card-description">Gain certifications that are globally recognized and
                             highly valued by employers in the energy sector</div>
                     </div>
-                    <div class="features__card">
+                    <div class="features__card" data-animation="slide-in">
                         <div class="features__card-icon"><svg width="49" height="48" viewBox="0 0 49 48" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -290,7 +305,7 @@
                         <div class="features__card-description">Access state-of-the-art labs, simulations, and field
                             training to develop practical skills.</div>
                     </div>
-                    <div class="features__card">
+                    <div class="features__card" data-animation="slide-in">
                         <div class="features__card-icon"><svg width="49" height="48" viewBox="0 0 49 48" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <rect x="1.91541" y="1" width="46" height="46" fill="url(#pattern0_61_129)" />
@@ -310,20 +325,22 @@
                         </div>
                     </div>
                 </div>
-                <a href="/courses.html" class="cta full-width"><span>Learn More</span> <span><svg width="25" height="24"
-                            viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a href="/courses.html" class="cta full-width" data-animation="slide-in"><span>Learn More</span>
+                    <span><svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
                             <path d="M14.93 5.92999L21 12L14.93 18.07" stroke-width="1.5" stroke-miterlimit="10"
                                 stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M4 12H20.83" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
                                 stroke-linejoin="round" />
-                        </svg></span></a>
+                        </svg>
+                    </span>
+                </a>
             </div>
         </div>
     </section>
-
     <section class="video__section">
         <div class="video__content container">
-            <div class="video__play-button">
+            <div class="video__play-button" data-animation="slide-in">
                 <svg width="55" height="62" viewBox="0 0 55 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M52.5 35.3301C55.8333 33.4056 55.8333 28.5944 52.5 26.6699L7.5 0.68911C4.16667 -1.23539 0 1.17023 0 5.01923L0 56.9808C0 60.8298 4.16667 63.2354 7.5 61.3109L52.5 35.3301Z"
@@ -331,34 +348,35 @@
                 </svg>
 
             </div>
-            <div class="video__texts-container">
+            <div class="video__texts-container" data-animation="slide-in">
                 <h2 class="video__header">Shaping the Future of Energy Professionals</h2>
                 <p class="video__text">At John Lander Energy Institute, we are committed to empowering individuals with
                     the skills, knowledge, and certifications needed to thrive in the energy and petroleum industries
                 </p>
-                <a aria-label="see more about us" href="/about.html" class="cta full-width"><span>About Us</span>
-                    <span><svg width="25" height="24" viewBox="0 0 25 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
+                <a aria-label="see more about us" href="/about.html" class="cta full-width">
+                    <span>About Us</span>
+                    <span>
+                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M14.93 5.92999L21 12L14.93 18.07" stroke-width="1.5" stroke-miterlimit="10"
                                 stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M4 12H20.83" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
                                 stroke-linejoin="round" />
-                        </svg></span></a>
+                        </svg>
+                    </span>
+                </a>
             </div>
         </div>
     </section>
-
-
-    <section class="review wrapper">
+    <section class="review wrapper ">
         <div class="features__section review container ">
             <div>
-                <h2 class="review features__header">
+                <h2 class="review features__header" data-animation="slide-in">
                     Master the Skills You Need for Success in Energy and Petroleum
                 </h2>
 
             </div>
             <div class="review features__texts-container">
-                <div class="review-container">
+                <div class="review-container" data-animation="slide-in">
                     <div class="review-card">
                         <p class="review-text">Gain certifications that are globally recognized and highly valued by
                             employers in the energy sector</p>
@@ -427,19 +445,23 @@
                         </div>
                     </div>
                 </div>
-                <a href="" class="cta"><span>Get Started</span> <span><svg width="25" height="24" viewBox="0 0 25 24"
-                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a href="" class="cta" data-animation="slide-in">
+                    <span>Get Started</span>
+                    <span>
+                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M14.93 5.92999L21 12L14.93 18.07" stroke-width="1.5" stroke-miterlimit="10"
                                 stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M4 12H20.83" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
                                 stroke-linejoin="round" />
-                        </svg></span></a>
+                        </svg>
+                    </span>
+                </a>
             </div>
         </div>
     </section>
     <section class="courses wrapper landing">
         <div class="features__section courses container-fluid ">
-            <div>
+            <div data-animation="slide-in">
                 <h2 class="courses features__header">
                     Master the Skills You Need for Success in Energy and Petroleum
                 </h2>
@@ -448,7 +470,7 @@
             </div>
             <div class="courses features__texts-container">
                 <div class="courses features__card-container">
-                    <div class="courses features__card">
+                    <div class="courses features__card" data-animation="slide-in">
                         <div class="courses features__card-icon">
                             <img src="/assets/images/dlbeatsnoopcom-3000-tfdwh8xut3-2.webp" loading="lazy" width="341"
                                 height="206" alt="image">
@@ -466,7 +488,7 @@
                                             stroke-linecap="round" stroke-linejoin="round" />
                                     </svg></span></a></div>
                     </div>
-                    <div class="courses features__card">
+                    <div class="courses features__card" data-animation="slide-in">
                         <div class="courses features__card-icon">
                             <img src="/assets/images/dlbeatsnoopcom-3000-tfdwh8xut3-2.webp" loading="lazy" width="341"
                                 height="206" alt="image">
@@ -484,7 +506,7 @@
                                             stroke-linecap="round" stroke-linejoin="round" />
                                     </svg></span></a></div>
                     </div>
-                    <div class="courses features__card">
+                    <div class="courses features__card" data-animation="slide-in">
                         <div class="courses features__card-icon">
                             <img src="/assets/images/dlbeatsnoopcom-3000-tfdwh8xut3-2.webp" loading="lazy" width="341"
                                 height="206" alt="image">
@@ -508,22 +530,90 @@
         </div>
     </section>
 
+    <section class="third-section container-fluid">
+        <header data-animation="slide-in">
+            <h2 class="subscribe features__header">
+                What Makes Us Different
+            </h2>
+            <p>World Class Training and Development</p>
+        </header>
+        <div class="design-line" data-animation="slide-in">
+            <div class="first-icon">
+                <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M26 12.494L23.1164 9.17344L23.5182 4.77783L19.2518 3.79838L17.0182 0L13 1.74391L8.98182 0L6.74818 3.79838L2.48182 4.76589L2.88364 9.16149L0 12.494L2.88364 15.8146L2.48182 20.2222L6.74818 21.2016L8.98182 25L13 23.2441L17.0182 24.9881L19.2518 21.1897L23.5182 20.2102L23.1164 15.8146L26 12.494ZM10.6364 18.4663L5.90909 13.6885L7.57545 12.0043L10.6364 15.086L18.4245 7.21452L20.0909 8.91065L10.6364 18.4663Z"
+                        fill="white" />
+                </svg>
 
+            </div>
+            <div class="second-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M14 12.25V25.6667M14 12.25C12.8998 11.6667 9.25983 10.5 3.5 10.5V23.3333C6.20025 23.3333 12.0802 23.3333 14 25.6667M14 12.25C15.1002 11.6667 18.7402 10.5 24.5 10.5V23.3333C21.7997 23.3333 15.9197 23.3333 14 25.6667"
+                        stroke="#001E60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M13.9997 11.6673C16.577 11.6673 18.6663 9.57798 18.6663 7.00065C18.6663 4.42332 16.577 2.33398 13.9997 2.33398C11.4223 2.33398 9.33301 4.42332 9.33301 7.00065C9.33301 9.57798 11.4223 11.6673 13.9997 11.6673Z"
+                        stroke="#001E60" stroke-width="2" />
+                </svg>
+            </div>
+            <div class="third-icon">
+                <svg width="39" height="30" viewBox="0 0 39 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M29.0278 7.5L22.875 13.5797V7.5H21.2566L15.375 13.4656V3.75H8.25V26.25H30.75V7.5H29.0278ZM29.25 24.75H9.75V5.25H13.875V15.375H15.599L21.375 9.51647V15.375H23.1921L29.25 9.38906V24.75Z"
+                        fill="#001E60" />
+                    <path
+                        d="M13.875 18.375V18.75H15.375V17.25H13.875V18.375ZM13.875 20.625H15.375V22.125H13.875V20.625ZM17.625 18.375V18.75H19.125V17.25H17.625V18.375ZM17.625 20.625H19.125V22.125H17.625V20.625ZM21.375 18.375V18.75H22.875V17.25H21.375V18.375ZM21.375 20.625H22.875V22.125H21.375V20.625ZM25.125 17.25H26.625V18.75H25.125V17.25ZM25.125 20.625H26.625V22.125H25.125V20.625Z"
+                        fill="#001E60" />
+                </svg>
+
+            </div>
+
+        </div>
+        <div class="contact-misc">
+            <div class="container three-column">
+                <div data-animation="slide-in">
+                    <h3>Learn from the Best</h3>
+                    <p>Our instructors are seasoned energy professionals with years of industry experience. They bring
+                        real-world expertise to
+                        the classroom, providing you with practical knowledge and skills that can be applied immediately
+                    </p>
+                </div>
+                <div data-animation="slide-in">
+                    <h3>personalized Learning</h3>
+                    <p>We understand that every learner is unique. That's why we offer personalized learning paths that
+                        cater to your
+                        individual needs, goals, and learning style. Our flexible training programs ensure you get the
+                        most out of your learning
+                        experience.
+                    </p>
+                </div>
+                <div data-animation="slide-in">
+                    <h3>Industry Connections</h3>
+                    <p>we have strong connections with leading energy companies and industry organizations. Our training
+                        programs provide
+                        opportunities to network with professionals, gain insights into industry trends, and access job
+                        opportunities that can
+                        advance your career.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="subscribe features__section wrapper">
         <div class="subscribe features__section container">
-            <h2 class="subscribe features__header">
+            <h2 class="subscribe features__header" data-animation="slide-in">
                 Be the First to Know About Courses, Events, and Industry Trends
             </h2>
-            <p>Join thousands of energy professionals who receive expert insights, career tips, and exclusive
+            <p data-animation="slide-in">Join thousands of energy professionals who receive expert insights, career
+                tips, and exclusive
                 opportunities straight to their inbox</p>
-            <form class="subscribe features__texts-container">
+            <form class="subscribe features__texts-container" data-animation="slide-in">
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" placeholder="Enter Email">
                 </div>
-                <a href="" class="cta full-width"><span>Subscribe Now</span> <span><svg width="25" height="24"
-                            viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a href="" class="cta full-width" data-animation="slide-in"><span>Subscribe Now</span> <span><svg
+                            width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M14.93 5.92999L21 12L14.93 18.07" stroke-width="1.5" stroke-miterlimit="10"
                                 stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M4 12H20.83" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
@@ -532,7 +622,7 @@
             </form>
         </div>
     </section>
-
+    <!-- MODIFIED: CORRECTED SPELLING ERRORS AND MADE ADJUSTMENTS TO THE SVG ELEMENTS -->
     <footer class="wrapper">
         <div class="container-fluid">
             <div class="footer-links-container">
@@ -580,8 +670,8 @@
                     <ul class="social-links">
                         <li>
                             <a aria-label="facebook link" href="">
-                                <svg fill="#0E8543" width="20px" height="20px" viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg" stroke="#0E8543">
+                                <svg fill="var(--green)" width="20px" height="20px" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg" stroke="var(--green)">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                                     <g id="SVGRepo_iconCarrier">
@@ -594,7 +684,7 @@
                         </li>
                         <li>
                             <a aria-label="instagram link" href="">
-                                <svg fill="#0E8543" width="20px" height="20px" viewBox="0 0 24 24"
+                                <svg fill="var(--green)" width="20px" height="20px" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -612,7 +702,7 @@
                         <li>
                             <a aria-label="linked-in link" href="">
 
-                                <svg fill="#0E8543" height="20px" width="20px" version="1.1" id="Icons"
+                                <svg fill="var(--green)" height="20px" width="20px" version="1.1" id="Icons"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                     viewBox="0 0 32 32" xml:space="preserve">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -625,7 +715,8 @@
                                 </svg>
                             </a>
                         </li>
-                        <li><a aria-label="whatsapp" href="">
+                        <li>
+                            <a aria-label="whatsapp" href="">
                                 <svg viewBox="0 0 20 20" version="1.1" width="20" height="20"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                     fill="#000000">
@@ -637,7 +728,7 @@
                                         <defs> </defs>
                                         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                             <g id="Dribbble-Light-Preview"
-                                                transform="translate(-300.000000, -7599.000000)" fill="#0E8543">
+                                                transform="translate(-300.000000, -7599.000000)" fill="var(--green)">
                                                 <g id="icons" transform="translate(56.000000, 160.000000)">
                                                     <path
                                                         d="M259.821,7453.12124 C259.58,7453.80344 258.622,7454.36761 257.858,7454.53266 C257.335,7454.64369 256.653,7454.73172 254.355,7453.77943 C251.774,7452.71011 248.19,7448.90097 248.19,7446.36621 C248.19,7445.07582 248.934,7443.57337 250.235,7443.57337 C250.861,7443.57337 250.999,7443.58538 251.205,7444.07952 C251.446,7444.6617 252.034,7446.09613 252.104,7446.24317 C252.393,7446.84635 251.81,7447.19946 251.387,7447.72462 C251.252,7447.88266 251.099,7448.05372 251.27,7448.3478 C251.44,7448.63589 252.028,7449.59418 252.892,7450.36341 C254.008,7451.35771 254.913,7451.6748 255.237,7451.80984 C255.478,7451.90987 255.766,7451.88687 255.942,7451.69881 C256.165,7451.45774 256.442,7451.05762 256.724,7450.6635 C256.923,7450.38141 257.176,7450.3464 257.441,7450.44643 C257.62,7450.50845 259.895,7451.56477 259.991,7451.73382 C260.062,7451.85686 260.062,7452.43903 259.821,7453.12124 M254.002,7439 L253.997,7439 L253.997,7439 C248.484,7439 244,7443.48535 244,7449 C244,7451.18666 244.705,7453.21526 245.904,7454.86076 L244.658,7458.57687 L248.501,7457.3485 C250.082,7458.39482 251.969,7459 254.002,7459 C259.515,7459 264,7454.51465 264,7449 C264,7443.48535 259.515,7439 254.002,7439"
@@ -646,7 +737,9 @@
                                             </g>
                                         </g>
                                     </g>
-                                </svg></a></li>
+                                </svg>
+                            </a>
+                        </li>
                     </ul>
 
                 </ul>
@@ -654,7 +747,7 @@
                     <li>Quick Links</li>
                     <li><a href="/">Home</a></li>
                     <li><a href="/about.html">About Us</a></li>
-                    <li><a href="/contact.html">Coontact Us</a></li>
+                    <li><a href="/contact.html">Contact Us</a></li>
                     <li><a href="/internship">Internship</a></li>
                     <li><a href="/e-portal">E- Portal</a></li>
 
@@ -666,7 +759,7 @@
                     <li><a href="/course-details.html">Well engineering</a></li>
                     <li><a href="/course-details.html">Directional drilling</a></li>
                     <li><a href="/course-details.html">Drilling</a></li>
-                    <li><a href="/course-details.html">Resevoir engineering</a></li>
+                    <li><a href="/course-details.html">Reservoir engineering</a></li>
 
                 </ul>
                 <ul class="media-section">
@@ -678,7 +771,7 @@
             </div>
             <div class="copyright-section">
                 <img src="/assets/logo/john lander institute logowhite 1.png" loading="lazy" alt="logo">
-                <p> &#169; 2024 John Lander Enegy Institute</p>
+                <p> &#169; 2024 John Lander Energy Institute</p>
                 <p>All Right Reserved</p>
             </div>
         </div>

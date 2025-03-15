@@ -67,7 +67,7 @@ nav {
     .bar {
         background-color: var(--green);
         width: 20px;
-        border: 1.2px solid green;
+        border: 1.2px solid var(--primary-clr);
         border-radius: 2px;
         transform: translate(0) rotate(0);
         transition: transform var(--transition-duration) ease-in-out;

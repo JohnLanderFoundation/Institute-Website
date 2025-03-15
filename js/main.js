@@ -66,3 +66,36 @@ function toggleCourseDetails(targetElement) {
         showElement.setAttribute("aria-expanded", "false")
     }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    // CREATING SMOOTH PAGE TO PAGE TRANSITIONS
+    let navLinks = document.querySelectorAll("[data-nav-link]")
+    navLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault()
+            let href = link.getAttribute("href")
+            document.body.classList.add("fade-out")
+            setTimeout(() => {
+                window.location.href = href
+            }, 500)
+        })
+    })
+    // INTERSECTION OBSERVER TO ANIMATE ENTRY OF ELEMENTS INTO THE PAGE
+    const observerOptions = {
+        root: null,
+        margin: "0px",
+        threshold: 0.2,
+    }
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            const { target } = entry
+            if (entry.isIntersecting) {
+                target.classList.add(target.dataset.animation)
+                observer.unobserve(target)
+            }
+        }, observerOptions)
+    })
+    document.querySelectorAll("[data-animation]").forEach((element) => {
+        observer.observe(element)
+    })
+})

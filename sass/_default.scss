@@ -2,12 +2,19 @@
 
 :root {
     --background-clr: #fff;
-    --green: #0e8543;
+
+
+    --primary-clr: hsl(221, 100%, 19%);
     --text-clr: hsla(180, 2%, 22%, 1);
     --fs-hero-header: clamp(1.5rem, 2.376vw + 0.861rem, 3rem);
     --fs-hero-sub-header: clamp(1rem, 0.396vw + 0.894rem, 1.25rem);
-    --fs-hero-btn: ;
     --transition-duration: .3s;
+}
+
+@property --green {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsl(221, 100%, 19%);
 }
 
 $main-breakpoint-width: 780px;
@@ -39,6 +46,23 @@ body {
 .container {
     max-width: min(1212px, 90%);
     margin-inline: auto;
+}
+
+.blue-bg {
+    background-color: var(--primary-clr) !important;
+
+    h2,
+    h3 {
+
+        color: #fafafa !important;
+    }
+
+
+
+    p {
+        color: #fdfdfd !important;
+        font-weight: 300;
+    }
 }
 
 .container-fluid {
@@ -231,6 +255,10 @@ input {
 
 }
 
+.left-align {
+    text-align: left !important;
+}
+
 .contact-misc {
     text-align: center;
     color: var(--text-clr);
@@ -243,6 +271,8 @@ input {
     h3 {
         font-size: 1rem;
     }
+
+
 
     .three-column {
         display: flex;

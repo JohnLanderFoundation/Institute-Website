@@ -1,0 +1,228 @@
+    .two-column-layout {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding-block: 2.265rem;
+        align-items: center;
+
+        @media screen and (width > $main-breakpoint-width) {
+            gap: 3rem;
+        }
+
+        .text-section {
+            flex: 5;
+        }
+
+        h2 {
+            color: var(--green);
+            font-size: clamp(1.25rem, 0.924vw + 1.011rem, 1.75rem);
+            display: block;
+            position: relative;
+            margin-block-end: 1.8em;
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 110%;
+                left: 0;
+                width: 100px;
+                height: 4px;
+                background-color: var(--primary-clr);
+            }
+        }
+
+        @media screen and (width < $main-breakpoint-width) {
+            .image-section.grid {
+                display: none !important;
+            }
+        }
+
+        .image-section.grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 1rem;
+
+            div:first-child {
+                grid-column: span 1;
+                grid-row: span 2;
+                max-height: 270px;
+                background-color: rgb(201, 201, 201);
+                border-radius: 29px;
+            }
+
+            div:not(:first-child) {
+                background-color: rgb(201, 201, 201);
+                aspect-ratio: 1;
+                border-radius: 29px;
+            }
+
+            img {
+                object-fit: cover;
+                // object-position: center;
+            }
+        }
+    }
+
+
+    @media screen and (width < $main-breakpoint-width) {
+        .aboutceo .image-section.grid {
+            display: none;
+        }
+    }
+
+    .third-section {
+        padding-block: 2.265rem;
+
+        header {
+            text-align: center;
+            margin-bottom: 6rem;
+
+            h2 {
+                color: var(--green);
+                font-size: clamp(1.25rem, 0.924vw + 1.011rem, 1.75rem);
+                display: block;
+                position: relative;
+                margin-block-end: 1.5rem;
+
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 110%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 100px;
+                    height: 4px;
+                    background-color: var(--primary-clr);
+                }
+            }
+        }
+    }
+
+    .design-line {
+        margin-bottom: 2rem;
+        width: 80%;
+        height: 8px;
+        margin-inline: auto;
+        background: linear-gradient(to right, var(--primary-clr) 25%, white);
+        position: relative;
+
+        div {
+            position: absolute;
+            width: 56px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            display: grid;
+            place-content: center;
+
+            &:first-child {
+                left: 0;
+                top: -50%;
+                transform: translateY(-35%);
+                background-color: var(--primary-clr);
+            }
+
+            &:nth-child(2) {
+                left: 50%;
+                top: -50%;
+                transform: translate(-50%, -35%);
+                border: 1.5px solid var(--primary-clr);
+                background-color: white;
+            }
+
+            &:last-child {
+                background-color: white;
+                right: 0;
+                top: -50%;
+                transform: translateY(-35%);
+                border: 1.5px solid var(--primary-clr);
+            }
+        }
+    }
+
+    [data-animation="slide-in"] {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    .slide-in {
+        animation: slide-in-animation 1s forwards;
+    }
+
+    @keyframes slide-in-animation {
+        from {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    [data-animation="zoom-in"] {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    .zoom-in {
+        animation: zoom-in-animation 1s forwards;
+    }
+
+    @keyframes zoom-in-animation {
+        from {
+            transform: scale(0);
+            opacity: 0;
+        }
+
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    section {
+        overflow-y: clip;
+    }
+
+    .embed-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        margin-block-end: 2rem;
+    }
+
+    .embed-container iframe {
+        border: 1pt solid rgb(236, 236, 236);
+    }
+
+    .embed-container iframe,
+    .embed-container object,
+    .embed-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .core-values {
+
+
+        @media screen and (width > $main-breakpoint-width) {
+            h3 {
+                font-size: 1.5rem;
+                margin-block-end: 2rem;
+            }
+
+            .three-column {
+
+                gap: 4rem;
+            }
+        }
+    }

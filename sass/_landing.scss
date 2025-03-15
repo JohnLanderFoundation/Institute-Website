@@ -45,7 +45,7 @@
             text-decoration: none;
             color: white;
             min-width: 220px;
-            width: min(220px, 100%);
+            // width: min(240px, 100%);
             background-color: var(--green);
             padding: var(--_btn-padding-tb) var(--_btn-padding-lr);
             font-size: clamp(0.875rem, 0.267vw + 0.8rem, 1rem);
@@ -78,7 +78,9 @@
             }
 
             &:hover {
-                background-color: #00431B;
+                // background-color: #00431B;
+                background-color: color-mix(in srgb, var(--green) 80%, black);
+                ;
                 outline: 1px solid transparent;
             }
         }
@@ -136,6 +138,7 @@
 
         @media screen and (width >$main-breakpoint-width) {
             max-width: 25ch;
+            margin-top: 1em;
         }
     }
 
@@ -210,7 +213,7 @@
 
 .video {
     &__section {
-        background: linear-gradient(to top, black, transparent), url('/assets/images/28606-1-1.webp') no-repeat center;
+        background: linear-gradient(to top, black, transparent), url('/assets/images/28606-1-1.png') no-repeat top;
         display: flex;
         justify-content: baseline;
         min-height: min(80dvh, 800px);
@@ -263,9 +266,14 @@ h2 {
     margin-block: 0;
 }
 
+.light-blue-bg {
+    background-color: color-mix(in srgb, var(--primary-clr) 2%, white);
+}
+
 .features {
     &__section {
         padding-block: rem(42px);
+
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -354,7 +362,8 @@ h2 {
 }
 
 .courses.wrapper.landing {
-    background: linear-gradient(to top, hsla(147, 81%, 29%, 0.9), hsla(147, 81%, 29%, 0.9)), url("/assets/images/c527b1f1f310395bd8f4b5cf433f9042.jpg") no-repeat center;
+    // --_darker:color-mix(in srgb, var(--green) 80%, black);
+    background: linear-gradient(to top, var(--green), var(--green)), url("/assets/images/c527b1f1f310395bd8f4b5cf433f9042.jpg") no-repeat center;
     background-size: cover;
     color: white;
 }
@@ -627,7 +636,7 @@ h2 {
     }
 
     &:hover {
-        background-color: #00431B;
+        background-color: color-mix(in srgb, var(--green) 80%, black);
     }
 
     &.white {
