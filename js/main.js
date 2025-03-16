@@ -81,10 +81,12 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     })
     // INTERSECTION OBSERVER TO ANIMATE ENTRY OF ELEMENTS INTO THE PAGE
+    const desktopThreshold = 0.1 //enter normally on desktop screens
+    const mobileThreshold = 0.05 // enter sooner on mobile screens
     const observerOptions = {
         root: null,
-        margin: "0px",
-        threshold: 0.2,
+        margin: "-0px",
+        threshold: window.innerWidth < 768 ? mobileThreshold : desktopThreshold,
     }
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach((entry) => {

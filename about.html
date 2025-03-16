@@ -32,7 +32,7 @@
 
 <body>
     <header class="hero-header">
-        <nav data-navigation class="white-nav">
+        <nav data-navigation>
             <div class="wrapper container-fluid">
                 <!-- LOGO CONTAINER  -->
                 <div class="logo-container">
@@ -157,53 +157,62 @@
                 </ul>
             </div>
         </nav>
-        <section class="hero hero__section container about-content-text">
+        <div class="content container center">
+            <div class="">
+                <h2 class="single-title">About Us</h2>
+
+            </div>
+        </div>
+        <div class="hero-static-img other">
+            <img src="/assets/images/aboutheroimg-1.webp" alt="hero-image" width="1440" height="800">
+
+
+        </div>
+        <!-- <section class="hero hero__section container about-content-text">
             <div class="hero__intro-text">
                 <p class="hero__header">About Us
                 </p>
-
+        
             </div>
-
+        
         </section>
-
+        
         <div class="slider" data-slide-duration="3500">
-
+        
             <div class="slides">
                 <img src="/assets/images/aboutheroimg-1.webp" alt="Image 1">
-                <img src="/assets/images/aboutheroimg-2.webp" alt="Image 2">
-                <img src="/assets/images/aboutheroimg-3.webp" alt="Image 3">
-                <img src="/assets/images/aboutheroimg-4.webp" alt="Image 4">
-
-
+        
             </div>
-
-        </div>
-
-        <button class="arrow left" onclick="changeSlide(-1)">&#10094;</button>
-        <button class="arrow right" onclick="changeSlide(1)">&#10095;</button>
+        
         </div> -->
     </header>
+
     <section class="light-blue-bg">
         <div class="two-column-layout container-fluid">
             <div class="text-section" data-animation="slide-in">
-                <h2>Elevate your Career</h2>
+                <h2>Our Vision</h2>
                 <p>
-                    Unlock your full potential and take your energy career to new heights. At JOHN LANDER ENERGY
-                    TRAINING
-                    RESOURCES AND
-                    TECHNOLOGY LIMITED, we provide world-class training and development programs designed to equip you
-                    with
-                    the skills,
-                    knowledge, and expertise needed to succeed in the ever-evolving energy industry.
-                    <br>
-                    <br>
-                    Discover our comprehensive training solutions and start elevating your career today!
+                    John Lander Energy Training Resources and Technology Limited envisions a world where academia and
+                    industry collaborate
+                    seamlessly to create a future-ready workforce. We strive to redefine energy education by integrating
+                    cutting-edge
+                    research, industry expertise, and hands-on innovation, empowering individuals to excel in the
+                    energy, oil, gas, and
+                    allied sectors while driving sustainable global progress.
+
                 </p>
             </div>
-            <div class="image-section grid" data-animation="zoom-in">
-                <div><img src="assets/images/eyc1.jpg" alt="Elevate your career image 1"></div>
-                <div><img src="assets/images/eyc2.jpg" alt="Elevate your career image 2"></div>
-                <div><img src="assets/images/eyc3.jpg" alt="Elevate your career image 3"></div>
+            <div class="image-section" data-animation="zoom-in">
+                <div>
+                    <img src="assets/images/visionimg-1.webp" alt="Elevate your career image 1" width="254" height="426"
+                        loading="lazy">
+                </div>
+                <div class="flex-column">
+                    <div><img src="assets/images/visionimg-2.webp" alt="Elevate your career image 2" width="207"
+                            height="205" loading="lazy"></div>
+                    <div><img src="assets/images/visionimg-3.webp" alt="Elevate your career image 3" width="207"
+                            height="205" loading="lazy"></div>
+                </div>
 
             </div>
         </div>
@@ -320,8 +329,8 @@
             <h2 class="review features__header">
                 Latest Events and Blog
             </h2>
-            <div class="wrapper container">
-                <article aria-label="click to read more" href="/blogpost.html" class="event-card">
+            <div class="wrapper container-fluid">
+                <article aria-label=" click to read more" href="/blogpost.html" class="event-card">
                     <div class="event-img-container">
                         <img src="/assets/images/heroimg-2.webp" alt="">
                     </div>
@@ -566,7 +575,7 @@
             </div>
         </div>
     </footer>
-    <script>
+    <!-- <script>
         let currentIndex = 0
         const slides = document.querySelector(".slides")
         const slider = document.querySelector(".slider")
@@ -600,7 +609,7 @@
         function stopSliderAnimation() {
             clearInterval(slideInterval)
         }
-    </script>
+    </script> -->
 </body>
 
 </html>

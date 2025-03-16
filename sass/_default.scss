@@ -46,7 +46,13 @@ body {
 .container {
     max-width: min(1212px, 90%);
     margin-inline: auto;
+
+    @media screen and (width > $main-breakpoint-width) {
+        max-width: min(1212px, 85%);
+
+    }
 }
+
 
 .blue-bg {
     background-color: var(--primary-clr) !important;
@@ -68,6 +74,11 @@ body {
 .container-fluid {
     max-width: min(1332px, 90%);
     margin-inline: auto;
+
+    @media screen and (width > $main-breakpoint-width) {
+        max-width: min(1332px, 88%);
+
+    }
 }
 
 header.hero-header {
@@ -366,7 +377,7 @@ header {
 
         .single-title {
             font-size: clamp(1.75rem, 2.309vw + 1.152rem, 3rem);
-            font-weight: 700;
+            font-weight: 600;
         }
 
 

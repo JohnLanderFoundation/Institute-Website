@@ -96,6 +96,10 @@
         color: white;
         width: min(100%, 620px);
 
+        @media screen and (width > $main-breakpoint-width) {
+            margin-top: 70px;
+        }
+
         >div {
             flex: 1;
         }
@@ -126,9 +130,9 @@
     }
 
     &__header {
-        font-size: clamp(1.5rem, 2.376vw + 0.861rem, 3rem);
+        font-size: clamp(1.5rem, 2.376vw + 0.861rem, 2.5rem);
         line-height: 1.5;
-        font-weight: 700;
+        font-weight: 600;
         margin-bottom: 8px;
 
         @media screen and (width < $main-breakpoint-width) {
@@ -138,7 +142,7 @@
 
         @media screen and (width >$main-breakpoint-width) {
             max-width: 25ch;
-            margin-top: 1em;
+            margin-top: 2em;
         }
     }
 
@@ -216,19 +220,21 @@
         background: linear-gradient(to top, black, transparent), url('/assets/images/28606-1-1.png') no-repeat top;
         display: flex;
         justify-content: baseline;
-        min-height: min(80dvh, 800px);
-
-        @media screen and (min-width: 600px) {}
     }
 
     &__content {
-        margin-block: auto 1rem;
+        margin-block: 7rem 1rem;
         display: grid;
         gap: rem(71px);
         width: min(100%, 100ch);
         margin-inline: auto;
         color: white;
         text-align: center;
+
+        @media screen and (width > $main-breakpoint-width) {
+            margin-block: auto 6%;
+
+        }
     }
 
     &__play-button {
@@ -362,8 +368,8 @@ h2 {
 }
 
 .courses.wrapper.landing {
-    // --_darker:color-mix(in srgb, var(--green) 80%, black);
-    background: linear-gradient(to top, var(--green), var(--green)), url("/assets/images/c527b1f1f310395bd8f4b5cf433f9042.jpg") no-repeat center;
+    --_transparent: color-mix(in srgb, var(--green) 70%, transparent);
+    background: linear-gradient(to top, var(--_transparent), var(--_transparent)), url("/assets/images/c527b1f1f310395bd8f4b5cf433f9042.webp") no-repeat center;
     background-size: cover;
     color: white;
 }
