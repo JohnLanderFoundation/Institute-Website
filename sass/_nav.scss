@@ -12,6 +12,19 @@ nav {
         background-color: white !important;
         --_color: black;
         --_svg-fill-clr: black;
+
+        .logo.black-text {
+            display: block;
+        }
+
+        .logo.white-text {
+            display: none;
+        }
+    }
+
+
+    .logo.black-text {
+        display: none;
     }
 
     @media screen and (width < $main-breakpoint-width) {
@@ -19,12 +32,25 @@ nav {
         background-color: white;
 
 
+
+        .logo.white-text {
+            display: none;
+        }
+
+        .logo.black-text {
+            display: block;
+        }
+
+
     }
+
+
+
 
 
     .logo {
         display: inline-block;
-        width: 40px;
+        width: 180px;
 
         img {
             display: block;

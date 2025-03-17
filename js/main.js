@@ -100,4 +100,77 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll("[data-animation]").forEach((element) => {
         observer.observe(element)
     })
+
+    // SECTION TO HANDLE PAGINATION FOR EVENT CARDS
+
+    const eventContainer = document.querySelector("[data-event-wrapper]")
+    const itemsPerPage = eventContainer?.dataset.itemsPerPage // Change this to dynamically adjust items per page
+    const events = Array.from(eventContainer.querySelectorAll(".event-card"))
+    const paginationControls = document.getElementById("pagination-controls")
+    let currentPage = 1
+    const totalPages = Math.ceil(events.length / itemsPerPage)
+
+    function displayEvents() {
+        events.forEach((event, index) => {
+            event.style.display =
+                index >= (currentPage - 1) * itemsPerPage && index < currentPage * itemsPerPage
+                    ? "block"
+                    : "none"
+        })
+        renderPagination()
+    }
+
+    function renderPagination() {
+        paginationControls.innerHTML = ""
+        if (totalPages <= 1) return // No pagination needed if only one page
+
+        const prevButton = document.createElement("button")
+        prevButton.innerText = "Previous"
+        prevButton.disabled = currentPage === 1
+        prevButton.addEventListener("click", () => {
+            currentPage--
+            displayEvents()
+            scrollToTop()
+        })
+        paginationControls.appendChild(prevButton)
+
+        for (let i = 1; i <= totalPages; i++) {
+            const pageButton = document.createElement("button")
+            pageButton.innerText = i
+            pageButton.className = currentPage === i ? "active" : ""
+            pageButton.addEventListener("click", () => {
+                currentPage = i
+                displayEvents()
+                scrollToTop()
+            })
+            paginationControls.appendChild(pageButton)
+        }
+
+        const nextButton = document.createElement("button")
+        nextButton.innerText = "Next"
+        nextButton.disabled = currentPage === totalPages
+        nextButton.addEventListener("click", () => {
+            currentPage++
+            displayEvents()
+            scrollToTop()
+        })
+        paginationControls.appendChild(nextButton)
+    }
+
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+    displayEvents()
+
+    const container = document.querySelector(".courses.features__card-container")
+    const prevButton = document.querySelector(".prev")
+    const nextButton = document.querySelector(".next")
+
+    nextButton.addEventListener("click", () => {
+        container.scrollBy({ left: 300, behavior: "smooth" })
+    })
+
+    prevButton.addEventListener("click", () => {
+        container.scrollBy({ left: -300, behavior: "smooth" })
+    })
 })

@@ -154,7 +154,7 @@
 
         @media screen and (width > $main-breakpoint-width) {
             line-height: 1.8;
-            font-weight: 500;
+            font-weight: 400;
         }
     }
 }
@@ -238,10 +238,31 @@
     }
 
     &__play-button {
+        --_svg-hover-clr: white;
+        display: block;
         margin-inline: auto;
-        padding: .5rem 1rem;
+        padding: .5rem;
+        width: 90px;
+        height: 90px;
+        display: grid;
+        place-content: center;
         border-radius: 50%;
-        width: fit-content;
+        transition: background-color .3s ease-in-out;
+
+        svg {
+            width: 50px;
+            transition: fill .3s ease-in-out 2s;
+            fill: var(--_svg-hover-clr);
+            transform: translateX(5px);
+        }
+
+
+        &:hover {
+            background-color: white;
+            --_svg-hover-clr: #FDB724;
+        }
+
+
     }
 
     &__header {
@@ -614,6 +635,7 @@ h2 {
     transition-property: background-color color border;
     transition: var(--transition-duration) ease-in-out;
 
+
     justify-content: center;
 
     &.fit-content {
@@ -642,7 +664,15 @@ h2 {
     }
 
     &:hover {
-        background-color: color-mix(in srgb, var(--green) 80%, black);
+        background-color: color-mix(in srgb, var(--green) 85%, white);
+    }
+
+    @media screen and (width > $main-breakpoint-width) {
+        &:hover {
+            background-color: color-mix(in srgb, var(--green) 92%, white);
+            scale: 1.05;
+        }
+
     }
 
     &.white {
