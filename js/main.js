@@ -1,6 +1,8 @@
 // SHOW AND HIDE SEARCH BAR ON NAVIGATION WHEN SEARCH ICON IS CLICKED
 const nav = document.querySelector(".nav-items")
-const toggleSearch = document.querySelectorAll(".nav-items [data-toggle-searchbar]")
+const toggleSearch = document.querySelectorAll(
+    ".nav-items [data-toggle-searchbar]"
+)
 toggleSearch.forEach((element) => {
     element.addEventListener("click", (e) => {
         value = element.dataset.toggleSearchbar
@@ -14,13 +16,13 @@ toggleSearch.forEach((element) => {
 })
 
 // MAKE NAVIGATION BAR STICKY BY ADDING A CLASS "scrolled" WHEN SCROLLED PAST A CERTAIN HEIGHT
-const navigaion = document.querySelector("[data-navigation]")
+const navigation = document.querySelector("[data-navigation]")
 window.addEventListener("scroll", () => {
     const hero = document.querySelector(".hero-header")
     if (window.scrollY > hero.offsetHeight) {
-        navigaion.classList.add("scrolled")
+        navigation.classList.add("scrolled")
     } else {
-        navigaion.classList.remove("scrolled")
+        navigation.classList.remove("scrolled")
     }
 })
 
@@ -39,7 +41,7 @@ dropdownToggleBtn.forEach((button) => {
     })
 })
 
-// TOGGLE VISISBILITY DROPDOWN ITEMS IN NAVIGATION WHEN CLICKED
+// TOGGLE VISIBILITY DROPDOWN ITEMS IN NAVIGATION WHEN CLICKED
 const open = document.querySelector(".open-nav")
 open.addEventListener("click", () => {
     const nav = document.querySelector(".nav-items")
@@ -48,7 +50,9 @@ open.addEventListener("click", () => {
 })
 
 // LOGIC TO OPEN AND CLOSE DETAILS ABOUT A COURSE IN THE COURSE-DETAILS PAGE
-const course = document.querySelectorAll(".course-details [data-toggle-course-details]")
+const course = document.querySelectorAll(
+    ".course-details [data-toggle-course-details]"
+)
 course.forEach((element) => {
     element.addEventListener("click", () => {
         toggleCourseDetails(element)
@@ -113,7 +117,8 @@ document.addEventListener("DOMContentLoaded", function () {
     function displayEvents() {
         events.forEach((event, index) => {
             event.style.display =
-                index >= (currentPage - 1) * itemsPerPage && index < currentPage * itemsPerPage
+                index >= (currentPage - 1) * itemsPerPage &&
+                index < currentPage * itemsPerPage
                     ? "block"
                     : "none"
         })
@@ -162,7 +167,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     displayEvents()
 
-    const container = document.querySelector(".courses.features__card-container")
+    const container = document.querySelector(
+        ".courses.features__card-container"
+    )
     const prevButton = document.querySelector(".prev")
     const nextButton = document.querySelector(".next")
 
