@@ -262,9 +262,11 @@ input {
     width: 100%;
     gap: 2rem;
     align-content: center;
+    justify-content: center;
 }
 .contact-misc .three-column > div {
     flex: 1;
+    max-width: 500px;
     min-width: 300px;
 }
 @media screen and (min-width: 600) {
@@ -338,6 +340,12 @@ header .content .single-title {
 @media screen and (width < 600px) {
     header .content {
         min-height: min(50vh, 550px);
+        justify-content: center;
+    }
+}
+@media screen and (width > 600px) {
+    header .content {
+        min-height: min(30vh, 550px);
         justify-content: center;
     }
 }
@@ -675,8 +683,7 @@ nav .nav-items a {
     display: inline-block;
     color: var(--_color);
     font-weight: var(--_font-weight);
-    transition: color var(--transition-duration) ease-in-out,
-        stroke var(--transition-duration) ease-in-out;
+    transition: color var(--transition-duration) ease-in-out, stroke var(--transition-duration) ease-in-out;
 }
 nav .nav-items a:hover {
     color: var(--green);
@@ -1239,8 +1246,7 @@ body:has(.blogpost-section) > header.hero-header {
     }
 }
 .video__section {
-    background: linear-gradient(to top, black, transparent),
-        url("/assets/images/28606-1-1.png") no-repeat top;
+    background: linear-gradient(to top, black, transparent), url("/assets/images/28606-1-1.png") no-repeat top;
     background-size: cover;
 
     display: flex;
@@ -1388,13 +1394,7 @@ h2 {
 
 .courses.wrapper.landing {
     --_transparent: color-mix(in srgb, var(--green) 70%, transparent);
-    background: linear-gradient(
-            to top,
-            var(--_transparent),
-            var(--_transparent)
-        ),
-        url("/assets/images/c527b1f1f310395bd8f4b5cf433f9042.webp") no-repeat
-            center;
+    background: linear-gradient(to top, var(--_transparent), var(--_transparent)), url("/assets/images/c527b1f1f310395bd8f4b5cf433f9042.webp") no-repeat center;
     background-size: cover;
     color: white;
 }
@@ -2184,3 +2184,11 @@ body {
     width: 100%;
     max-width: unset;
 } /*# sourceMappingURL=main.css.map */
+
+/* later adjustments  */
+.text-center {
+    text-align: center;
+}
+.mb-2 {
+    margin-bottom: 1.2rem;
+}
